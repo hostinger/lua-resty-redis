@@ -3,8 +3,9 @@
 
 local sub = string.sub
 local byte = string.byte
-local tcp = ngx.socket.tcp
-local null = ngx.null
+local socket = require('socket')
+local tcp = socket.tcp
+local null = nil
 local type = type
 local pairs = pairs
 local unpack = unpack
