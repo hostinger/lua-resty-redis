@@ -97,7 +97,7 @@ function _M.set_keepalive(self, ...)
         return nil, "subscribed state"
     end
 
-    return sock:setkeepalive(...)
+    return sock:setoption('keepalive', (...))
 end
 
 
