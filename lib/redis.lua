@@ -251,7 +251,7 @@ local function _do_cmd(self, ...)
 
     -- print("request: ", table.concat(req))
 
-    local bytes, err = sock:send(req)
+    local bytes, err = sock:send(table.concat(req))
     if not bytes then
         return nil, err
     end
